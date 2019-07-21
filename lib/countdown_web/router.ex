@@ -7,6 +7,7 @@ defmodule CountdownWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug CountdownWeb.Plugs.SetUser # our module plug is added onto list of plugs. notice that all above are function plugs.
   end
 
   pipeline :api do
