@@ -1,1 +1,8 @@
 /* This file is for your main application css. */
+.jumbotron .flip-clock-wrapper {
+  text-align: center;
+  position: relative;
+  width: auto;
+  margin-top: 8em;
+  display: inline-block;
+}
