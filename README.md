@@ -5,6 +5,9 @@ To start your Phoenix server:
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Install Node.js dependencies with `cd assets && npm install`
+  * Add `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` to your bash env variables
+    * example here https://www.tricksofthetrades.net/2015/06/14/notes-bash-env-variables/
+    * values found here https://console.developers.google.com/apis/credentials?authuser=0&project=countdown-247418
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.

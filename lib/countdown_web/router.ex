@@ -20,6 +20,13 @@ defmodule CountdownWeb.Router do
     resources "/events", EventController
   end
 
+  scope "/auth", CountdownWeb do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", CountdownWeb do
   #   pipe_through :api
