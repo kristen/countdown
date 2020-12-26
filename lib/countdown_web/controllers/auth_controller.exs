@@ -1,5 +1,6 @@
 defmodule CountdownWeb.AuthController do
   use CountdownWeb, :controller
+  plug Ueberauth
 
   alias Countdown.User
 
@@ -31,5 +32,11 @@ defmodule CountdownWeb.AuthController do
       user ->
         {:ok, user}
     end
+  end
+
+  def signout(conn, _params) do
+    conn
+    |> configure_session(drop: true)
+    |> redirect(to: developer_path(conn, :index))
   end
 end

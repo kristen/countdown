@@ -1,12 +1,10 @@
 defmodule CountdownWeb.Plugs.SetUser do
   import Plug.Conn
-  import Phoenix.Controller
 
   alias Countdown.Repo
   alias Countdown.User
 
   def init(_params) do
-    
   end
 
   def call(conn, _params) do
